@@ -20,17 +20,24 @@ def LoadPanel():
 		elif form.event02.data:
 			print('event 2 triggered')
 			success = execute_js('play.js', ' -i 0.0.0.0 -e ./events/2.evt')
+			if success:
+				flash('Event sent.')
 		elif form.event03.data:
 			print('event 3 triggered')
 			success = execute_js('play.js', ' -i 0.0.0.0 -e ./events/3.evt')
+			if success:
+				flash('Event sent.')
 		elif form.event04.data:
 			print('event 4 triggered')
 			success = execute_js('play.js', ' -i 0.0.0.0 -e ./events/4.evt')
+			if success:
+				flash('Event sent.')
 		elif form.event05.data:
 			print('event 5 triggered')
 			success = execute_js('play.js', ' -i 0.0.0.0 -e ./events/5.evt')
+			if success:
+				flash('Event sent.')
 		elif form.activate.data:
-			flash('Server Activated')
 			success = execute_js('serve.js')
 	
 		elif form.deactivate.data:
